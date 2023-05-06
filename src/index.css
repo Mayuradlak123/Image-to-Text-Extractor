@@ -45,6 +45,13 @@ body {
     outline: none;
 }
 
+#msg {
+    padding: 0% 2%;
+    font-size: 18px;
+    padding-top: -5%;
+    color: green;
+}
+
 .logo {
     height: 60px;
     margin-bottom: 30px;

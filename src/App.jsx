@@ -53,6 +53,14 @@ function App() {
   const copyText = () => {
     toast.success("Text Copied",{position:'bottom-center'})
     copy(text);
+    setTimeout(()=>{
+  const msg =document.getElementById('msg');
+  msg.innerText="Text Copied"
+    },100)
+    setTimeout(()=>{
+      const msg =document.getElementById('msg');
+      msg.innerText=""
+        },1000)
   };
   return (
     <React.Fragment>
@@ -72,11 +80,13 @@ function App() {
           ) : (
             <>
               <div className="btn">
+              <p id="msg"></p>
                 <button
                   onClick={copyText}
                 > 
                   copy 
-                </button>
+                </button> <br />
+              
               </div>
               <TextWrapper text={text} />
             </>
